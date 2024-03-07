@@ -24,7 +24,7 @@ public class Teacher extends Worker{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Teacher teacher = (Teacher) o;
         return hours == teacher.hours && direction.equals(teacher.direction);

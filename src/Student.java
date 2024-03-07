@@ -23,7 +23,7 @@ public class Student extends Person{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Student student = (Student) o;
         return scholarship == student.scholarship && speciality.equals(student.speciality);

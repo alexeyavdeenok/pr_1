@@ -22,7 +22,7 @@ public class Worker extends Person{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Worker worker = (Worker) o;
         return salary == worker.salary && profession.equals(worker.profession);
