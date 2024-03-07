@@ -45,7 +45,7 @@ public class Teacher extends Worker {
     return this.hours;
   }
 
-  public void setHours(int hours) {
+  public void setHours(int hours) { // Установка количества рабочих часов в неделю
     if (hours >= 0 && hours <= 40) {
       this.hours = hours;
     } else {

@@ -44,7 +44,7 @@ public class Person {
     return this.age;
   }
 
-  public void setAge(int age) {
+  public void setAge(int age) { // Установка возраста с реалистичным значением
     if (age >= 0 && age < 150) {
       this.age = age;
     } else {

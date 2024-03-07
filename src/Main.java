@@ -70,7 +70,8 @@ public class Main {
     }
   }
 
-  public static boolean addElem() {
+  public static boolean
+      addElem() { // Добавление элемента с параметрами, полученными от пользователя
     System.out.println("Выберите класс объекта");
     System.out.println("1. Персона");
     System.out.println("2. Сотрудник");
@@ -120,7 +121,7 @@ public class Main {
     return false;
   }
 
-  public static boolean addPerson() {
+  public static boolean addPerson() { // Добавление класса Персона
     System.out.println("Ввевдите имя: ");
     String name = input.next();
     System.out.println("Введите возраст: ");
@@ -139,7 +140,7 @@ public class Main {
     }
   }
 
-  public static boolean addWorker() {
+  public static boolean addWorker() { // Добавление класса Сотрудник
     System.out.println("Введите имя: ");
     String name = input.next();
     System.out.println("Введите возраст:");
@@ -169,7 +170,7 @@ public class Main {
     return false;
   }
 
-  public static boolean addTeacher() {
+  public static boolean addTeacher() { // Добавление объекта класса Преподаватель
     System.out.println("Введите имя: ");
     String name = input.next();
     System.out.println("Введите возраст:");
@@ -207,7 +208,7 @@ public class Main {
     return false;
   }
 
-  public static boolean addStudent() {
+  public static boolean addStudent() { // Добавление объекта класса Студент
     System.out.println("Введите имя: ");
     String name = input.next();
     System.out.println("Введите возраст:");
@@ -237,7 +238,7 @@ public class Main {
     return false;
   }
 
-  public static void printElem() {
+  public static void printElem() { // Вывод элементов list с указанием индекса и класса объекта
     for (int i = 0; i < list.size(); i++) {
       System.out.println("Индекс: " + i);
       if (list.get(i).getClass() == Person.class) {
@@ -254,7 +255,8 @@ public class Main {
     }
   }
 
-  public static boolean emptyObject() {
+  public static boolean
+      emptyObject() { // Добавление объекта выбранного класса, используя конструктор по умолчанию
     System.out.println("Выберите класс объекта");
     System.out.println("1. Персона");
     System.out.println("2. Сотрудник");
@@ -292,7 +294,7 @@ public class Main {
     return false;
   }
 
-  public static void deleteObject() {
+  public static void deleteObject() { // Удаление объекта по индексу
     System.out.println("Введите индекс объекта, который хотите удалить:");
     int index = -1;
     if (input.hasNextInt()) {
@@ -308,7 +310,7 @@ public class Main {
     }
   }
 
-  public static boolean equalObjects() {
+  public static boolean equalObjects() { // Сравнение объектов и вывод hashCode
     System.out.println("Введите индекс первого объекта:");
     int index1 = -1;
     if (input.hasNextInt()) {

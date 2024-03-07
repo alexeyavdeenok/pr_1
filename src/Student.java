@@ -44,7 +44,7 @@ public class Student extends Person {
     return this.scholarship;
   }
 
-  public void setScholarship(int scholarship) {
+  public void setScholarship(int scholarship) { // Установка размера стипендии
     if (scholarship >= 0 && scholarship <= 100000) {
       this.scholarship = scholarship;
     } else {

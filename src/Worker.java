@@ -45,7 +45,7 @@ public class Worker extends Person {
   }
 
   public void setSalary(int salary) {
-    if (salary >= 0 && salary < 2000000) {
+    if (salary >= 0 && salary < 2000000) { // Установка заработной платы
       this.salary = salary;
     } else {
       System.out.println("Недопустимое значение з/п");
