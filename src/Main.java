@@ -48,6 +48,16 @@ public class Main {
                     printElem();
                     break;
                 case 5:
+                    if (list.isEmpty()) {
+                        System.out.println("Список пуст");
+                        break;
+                    }
+                    if (equalObjects()) {
+                        break;
+                    } else {
+                        System.out.println("Сравнение не удалось");
+                        break;
+                    }
                 case 6:
                     System.out.println("Программа завершена");
                     System.exit(0);
@@ -278,6 +288,8 @@ public class Main {
         int index = -1;
         if (input.hasNextInt()) {
             index = input.nextInt();
+        } else {
+            input.next();
         }
         if (index >= 0 && index < list.size()) {
             list.remove(index);
@@ -285,5 +297,44 @@ public class Main {
         } else {
             System.out.println("Объект не удален, неверный индекс");
         }
+    }
+    public static boolean equalObjects() {
+        System.out.println("ВВедите индекс первого объекта:");
+        int index1 = -1;
+        if (input.hasNextInt()) {
+            index1 = input.nextInt();
+        } else {
+            input.next();
+            return false;
+        }
+        if (!(index1 >= 0 && index1 < list.size())){
+            System.out.println("Неверный индекс");
+            return false;
+        }
+        System.out.println("ВВедите индекс второго объекта:");
+        int index2 = -1;
+        if (input.hasNextInt()) {
+            index2 = input.nextInt();
+        } else {
+            input.next();
+            return false;
+        }
+        if (!(index2 >= 0 && index2 < list.size())){
+            System.out.println("Неверный индекс");
+            return false;
+        }
+        boolean check = list.get(index1).equals(list.get(index2));
+        int hash1 = list.get(index1).hashCode();
+        int hash2 = list.get(index2).hashCode();
+        if (check) {
+            System.out.println("Объекты равны");
+            System.out.println("hashCode первого объекта: " + hash1);
+            System.out.println("hashCode второго объекта: " + hash2);
+            return true;
+        }
+        System.out.println("Объекты не равны");
+        System.out.println("hashCode первого объекта: " + hash1);
+        System.out.println("hashCode второго объекта: " + hash2);
+        return true;
     }
 }
